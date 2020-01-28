@@ -327,7 +327,7 @@ class SignatureImporter extends React.Component {
   }
 
   validateAndSetSignature = (inputsSignatures, errback) => {
-    const {number, inputs, signatureImporters, unsignedTransaction, setComplete} = this.props;
+    const {number, network, inputs, outputs, signatureImporters, setComplete} = this.props;
 
     if (!Array.isArray(inputsSignatures)) {
       errback("Signature is not an array of strings.");
@@ -356,7 +356,7 @@ class SignatureImporter extends React.Component {
 
       let publicKey;
       try{
-        publicKey = validateMultisigSignature(unsignedTransaction, inputIndex, input, inputSignature);
+        publicKey = validateMultisigSignature(network, inputs, outputs, inputIndex, inputSignature);
       } catch(e) {
         errback(`Signature for input ${inputNumber} is invalid.`);
         return;
@@ -385,6 +385,7 @@ class SignatureImporter extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   return {
+    ...state.settings,
     ...{
       signatureImporters: state.spend.signatureImporters,
       signatureImporter: state.spend.signatureImporters[ownProps.number],
