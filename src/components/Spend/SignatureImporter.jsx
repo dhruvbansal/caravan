@@ -346,7 +346,6 @@ class SignatureImporter extends React.Component {
     const publicKeys = [];
     const finalizedSignatureImporters = Object.values(signatureImporters).filter((signatureImporter) => (signatureImporter.finalized));
     for (let inputIndex = 0; inputIndex < inputsSignatures.length; inputIndex += 1) {
-      const input = inputs[inputIndex];
       const inputNumber = inputIndex + 1;
       const inputSignature = inputsSignatures[inputIndex];
       if (validateHex(inputSignature) !== '') {

@@ -11,7 +11,7 @@ import {externalLink} from "../utils";
 import Test from "./Test";
 
 import {
-  Box, Button,
+  Box,
   Table, TableBody, TableRow, TableCell
 } from "@material-ui/core";
 

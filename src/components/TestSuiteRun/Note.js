@@ -11,7 +11,6 @@ import {
 import { 
   TextField,
 } from '@material-ui/core';
-import { Info, Warning, Error } from '@material-ui/icons';
 
 const KEYSTORE_MODE = "keystore";
 const TEST_RUN_MODE = "testRun";
@@ -34,7 +33,7 @@ class NoteBase extends React.Component {
   }
 
   handleChange = (event) => {
-    const {setNote, mode, testRunIndex, note} = this.props;
+    const {setNote, mode, testRunIndex} = this.props;
     const newNote = event.target.value;
     if (mode === TEST_RUN_MODE) {
       setNote(testRunIndex, newNote);

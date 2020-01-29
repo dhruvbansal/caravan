@@ -7,7 +7,7 @@ import {
 } from "unchained-wallets";
 import { 
   Box, Typography, 
-  AppBar, Tabs, Tab, Paper,
+  Tabs, Tab, Paper,
   List, ListItem, ListItemIcon, ListItemText,
 } from '@material-ui/core';
 import { Info, Warning, Error } from '@material-ui/icons';

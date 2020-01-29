@@ -160,7 +160,7 @@ class TestRunBase extends React.Component {
   }
 
   start = async () => {
-    const {test, keystore, testRunIndex, startTestRun, endTestRun, setErrorNotification} = this.props;
+    const {test, keystore, testRunIndex, startTestRun} = this.props;
     startTestRun(testRunIndex);
     if (keystore.type === HERMIT) { return; }
     const result = await test.run();

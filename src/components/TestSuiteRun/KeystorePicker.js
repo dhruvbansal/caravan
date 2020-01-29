@@ -18,7 +18,7 @@ import {
 } from "../../actions/errorNotificationActions";
 
 import {
-  Box, Grid, Typography,
+  Box, Grid,
   FormControl, InputLabel, Select, MenuItem,
   TextField, 
   Button,

@@ -6,7 +6,7 @@ import {
 } from "../actions/errorNotificationActions";
 
 import { 
-  Snackbar, Button, IconButton
+  Snackbar, IconButton
 } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
 
